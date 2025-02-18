@@ -1,0 +1,157 @@
+type: vertical-stack
+cards:
+  # Recovery Card
+  - type: entities
+    title: "Whoop Recovery"
+    entities:
+      - entity: sensor.whoop_recovery_score
+        name: "Recovery Score"
+      - type: attribute
+        entity: sensor.whoop_recovery_score
+        attribute: resting_heart_rate
+        name: "Resting Heart Rate"
+      - type: attribute
+        entity: sensor.whoop_recovery_score
+        attribute: hrv_rmssd
+        name: "HRV (RMSSD)"
+      - type: attribute
+        entity: sensor.whoop_recovery_score
+        attribute: spo2_percentage
+        name: "SpO2 %"
+      - type: attribute
+        entity: sensor.whoop_recovery_score
+        attribute: skin_temp_celsius
+        name: "Skin Temperature (°C)"
+      - type: attribute
+        entity: sensor.whoop_recovery_score
+        attribute: user_calibrating
+        name: "Calibrating"
+
+  # Sleep Card
+  - type: entities
+    title: "Whoop Sleep"
+    entities:
+      - entity: sensor.whoop_sleep_score
+        name: "Sleep Performance"
+      - type: attribute
+        entity: sensor.whoop_sleep_score
+        attribute: sleep_consistency
+        name: "Sleep Consistency %"
+      - type: attribute
+        entity: sensor.whoop_sleep_score
+        attribute: sleep_efficiency
+        name: "Sleep Efficiency %"
+      - type: attribute
+        entity: sensor.whoop_sleep_score
+        attribute: respiratory_rate
+        name: "Respiratory Rate"
+      - type: attribute
+        entity: sensor.whoop_sleep_score
+        attribute: sleep_cycles
+        name: "Sleep Cycles"
+      - type: attribute
+        entity: sensor.whoop_sleep_score
+        attribute: disturbances
+        name: "Disturbances"
+      - type: divider
+      - type: attribute
+        entity: sensor.whoop_sleep_score
+        attribute: light_sleep_time
+        name: "Light Sleep (ms)"
+      - type: attribute
+        entity: sensor.whoop_sleep_score
+        attribute: rem_sleep_time
+        name: "REM Sleep (ms)"
+      - type: attribute
+        entity: sensor.whoop_sleep_score
+        attribute: deep_sleep_time
+        name: "Deep Sleep (ms)"
+      - type: attribute
+        entity: sensor.whoop_sleep_score
+        attribute: awake_time
+        name: "Awake Time (ms)"
+      - type: divider
+      - type: attribute
+        entity: sensor.whoop_sleep_score
+        attribute: baseline_sleep_need
+        name: "Baseline Sleep Need (ms)"
+      - type: attribute
+        entity: sensor.whoop_sleep_score
+        attribute: need_from_nap
+        name: "Need from Nap (ms)"
+      - type: attribute
+        entity: sensor.whoop_sleep_score
+        attribute: need_from_strain
+        name: "Need from Strain (ms)"
+      - type: attribute
+        entity: sensor.whoop_sleep_score
+        attribute: need_from_debt
+        name: "Need from Sleep Debt (ms)"
+      - type: attribute
+        entity: sensor.whoop_sleep_score
+        attribute: start_time
+        name: "Sleep Start"
+      - type: attribute
+        entity: sensor.whoop_sleep_score
+        attribute: end_time
+        name: "Sleep End"
+
+  # Strain Card
+  - type: entities
+    title: "Whoop Strain"
+    entities:
+      - entity: sensor.whoop_strain_score
+        name: "Strain Score"
+      - type: attribute
+        entity: sensor.whoop_strain_score
+        attribute: kilojoules
+        name: "Kilojoules"
+      - type: attribute
+        entity: sensor.whoop_strain_score
+        attribute: average_heart_rate
+        name: "Average Heart Rate"
+      - type: attribute
+        entity: sensor.whoop_strain_score
+        attribute: max_heart_rate
+        name: "Max Heart Rate"
+      - type: attribute
+        entity: sensor.whoop_strain_score
+        attribute: start_time
+        name: "Start Time"
+      - type: attribute
+        entity: sensor.whoop_strain_score
+        attribute: end_time
+        name: "End Time"
+      - type: attribute
+        entity: sensor.whoop_strain_score
+        attribute: score_state
+        name: "Score State"
+
+  # Workout Card (if available from your last workout)
+  - type: entities
+    title: "Last Workout"
+    entities:
+      - type: attribute
+        entity: sensor.whoop_workout
+        attribute: strain
+        name: "Workout Strain"
+      - type: attribute
+        entity: sensor.whoop_workout
+        attribute: average_heart_rate
+        name: "Average HR"
+      - type: attribute
+        entity: sensor.whoop_workout
+        attribute: max_heart_rate
+        name: "Max HR"
+      - type: attribute
+        entity: sensor.whoop_workout
+        attribute: kilojoules
+        name: "Kilojoules"
+      - type: attribute
+        entity: sensor.whoop_workout
+        attribute: distance_meter
+        name: "Distance (m)"
+      - type: attribute
+        entity: sensor.whoop_workout
+        attribute: altitude_change_meter
+        name: "Altitude Change (m)"

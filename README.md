@@ -1,3 +1,17 @@
+## Visualization Examples
+
+### Simple View
+![Simple View](example_images/simple_view.png)
+*Basic display of Whoop metrics in Home Assistant*
+
+### Detailed View
+![Detailed View](example_images/detailed_view.png)
+*Comprehensive dashboard showing all available Whoop data*
+
+## Dashboard Configuration
+
+You can create a custom dashboard using the following YAML configuration. Create a new dashboard in Home Assistant and copy this configuration to get started:
+
 # Whoop Integration for Home Assistant
 
 This project provides a complete integration between Whoop and Home Assistant, consisting of two parts:
@@ -126,19 +140,95 @@ After installation, add the integration through the Home Assistant UI:
 4. Search for "Whoop"
 5. Enter your Whoop user ID
 
+
+### Installation Steps for Dashboard
+1. Go to Home Assistant Dashboard
+2. Click the three dots menu in the top right
+3. Click "Edit Dashboard"
+4. Click the "+" button to add a new card
+5. Choose "Manual" card
+6. Copy and paste the YAML configuration from all_data.yaml
+7. Click "Save"
+8. Adjust the dashboard to your liking.
+
 ## Available Sensors
 
 ### Recovery Score
 - Main value: Recovery percentage
+- Attributes:
+  - Resting Heart Rate
+  - Respiratory Rate
+  - SpO2 Percentage
+  - HRV (RMSSD)
+  - Skin Temperature (°C)
+  - User Calibrating Status
+  - Updated At
+  - Created At
+  - Cycle ID
+  - Sleep ID
 
 ### Sleep Score
 - Main value: Sleep performance percentage
+- Attributes:
+  - Respiratory Rate
+  - Sleep Consistency (%)
+  - Sleep Efficiency (%)
+  - Sleep Cycles
+  - Disturbances
+  - Sleep Times:
+    - Total Sleep Time (ms)
+    - Light Sleep Time (ms)
+    - REM Sleep Time (ms)
+    - Deep Sleep Time (ms)
+    - Awake Time (ms)
+  - Sleep Need:
+    - Baseline Sleep Need (ms)
+    - Need from Nap (ms)
+    - Need from Strain (ms)
+    - Need from Sleep Debt (ms)
+  - Start Time
+  - End Time
 
 ### Strain Score
 - Main value: Day strain
+- Attributes:
+  - Kilojoules
+  - Average Heart Rate
+  - Max Heart Rate
+  - Start Time
+  - End Time
+  - Cycle ID
+  - Timezone Offset
+  - Score State
 
-### Average Heart Rate
-- Main value: Current Average Heart Rate
+### Heart Rate
+- Main value: Current resting heart rate (bpm)
+- Attributes:
+  - Max Heart Rate
+  - Average Heart Rate
+
+### Workout
+- Main value: Workout strain
+- Attributes:
+  - Altitude Change (meters)
+  - Altitude Gain (meters)
+  - Average Heart Rate
+  - Distance (meters)
+  - Kilojoules
+  - Max Heart Rate
+  - Percent Recorded
+  - Heart Rate Zones Duration (milliseconds):
+    - Zone 0
+    - Zone 1
+    - Zone 2
+    - Zone 3
+    - Zone 4
+    - Zone 5
+  - Start Time
+  - End Time
+  - Sport ID
+  - Workout ID
+
 
 ## Troubleshooting
 
