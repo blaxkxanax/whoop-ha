@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  whoop-integration:
+    build: .
+    ports:
+      - "2008:2008"
+    volumes:
+      - ./data:/app/data:rw  # For database and logs
+      - ./config:/app/config:rw  # For configuration files
+    environment:
+      - SQLITE_DB=/app/data/whoop.db
+      - LOG_FILE=/app/data/whoop.log
+      - CONFIG_DIR=/app/config
+    env_file:
+      - ./config/.env
+    user: "${UID}:${GID}"  # Run as host user to avoid permission issues
+    restart: unless-stopped
+
+volumes:
+  whoop_data:
+    name: whoop_data 

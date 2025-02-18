@@ -1,0 +1,11 @@
+{
+    "domain": "whoop",
+    "name": "Whoop Integration",
+    "documentation": "https://github.com/blaxkxanax/whoop-ha",
+    "dependencies": [],
+    "codeowners": [],
+    "requirements": ["requests", "voluptuous"],
+    "version": "1.0.0",
+    "iot_class": "cloud_polling",
+    "config_flow": true
+}
