@@ -2,31 +2,33 @@
 
 ### Simple View
 ![Simple View](example_images/simple_view.png)
+
 *Basic display of Whoop metrics in Home Assistant*
 
 ### Detailed View
 ![Detailed View](example_images/detailed_view.png)
+
 *Comprehensive dashboard showing all available Whoop data*
 
 ### Sleep View
 ![Sleep View](example_images/sleep_view.png)
+
 *Sleep dashboard showing sleep metrics*
 
 ### Workout View
 ![Workout View](example_images/workout_view.png)
+
 *Workout dashboard showing workout metrics*
 
 ### Recovery View
 ![Recovery View](example_images/recovery_view.png)
+
 *Recovery dashboard showing recovery metrics*
 
 ### Strain View
 ![Strain View](example_images/strain_view.png)
-*Strain dashboard showing strain metrics*
 
-### Heart Rate View
-![Heart Rate View](example_images/heart_rate_view.png)
-*Heart rate dashboard showing heart rate metrics*
+*Strain dashboard showing strain metrics*
 
 ## Dashboard Configuration
 
